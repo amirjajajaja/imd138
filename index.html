@@ -1,135 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>Home | IMD318 Personal Digital Space</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>My Personal Website</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+body,h1,h2,h3,h4,h5,h6{
     font-family:"Times New Roman", serif;
-    scroll-behavior:smooth;
 }
 
 body{
-    background:#f5f7fa;
+    background:#F4F8FC;
+    margin:0;
 }
 
 /* NAVIGATION */
 
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(15,23,42,0.85);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+.w3-bar{
+    background:white !important;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
 }
 
-.logo{
-    color:silver;
-    font-size:30px;
+.w3-bar-item{
     font-weight:bold;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:30px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    font-size:18px;
     transition:0.3s;
 }
 
-nav ul li a:hover{
-    color:silver;
+.w3-bar-item:hover{
+    background:#EAF2FF !important;
 }
 
-/* HERO SECTION */
+.active-nav{
+    background:#2563EB !important;
+    color:white !important;
+    border-radius:8px;
+}
+
+.search-box{
+    width:220px;
+    transition:0.3s;
+}
+
+.search-box:focus{
+    width:280px;
+}
+
+/* HERO */
 
 .hero{
-    height:100vh;
     background:linear-gradient(
         135deg,
         #0F172A,
         #2563EB,
         #C0C0C0
     );
-    
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
     color:white;
-    padding:20px;
 }
 
-.hero-content h3{
-    letter-spacing:3px;
-    margin-bottom:15px;
+.hero h1{
+    font-size:60px;
+    letter-spacing:2px;
 }
 
-.hero-content h1{
-    font-size:70px;
-    margin-bottom:20px;
-}
-
-.hero-content p{
-    font-size:24px;
-    margin-bottom:35px;
-}
-
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    background:white;
-    color:#2563EB;
-    padding:15px 35px;
-    border-radius:30px;
-    font-size:18px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:translateY(-5px);
-}
-
-/* HOME CONTENT */
-
-.home-content{
-    padding:100px 10%;
-    text-align:center;
-    background:white;
-}
-
-.home-content h2{
-    color:#2563EB;
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-.home-content p{
+.hero p{
     max-width:800px;
     margin:auto;
     line-height:1.8;
-    font-size:18px;
+}
+
+.hero .w3-button{
+    margin-top:20px;
+    font-weight:bold;
+}
+
+/* SECTION */
+
+.section-title{
+    color:#2563EB;
+}
+
+/* CARDS */
+
+.w3-card{
+    border-radius:15px;
+    transition:0.3s;
+    height:100%;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.w3-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(37,99,235,0.25);
+}
+
+.card-icon{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+/* BUTTON */
+
+.blue-btn{
+    background:#2563EB !important;
+    color:white !important;
+    border-radius:8px;
+}
+
+.blue-btn:hover{
+    background:#1D4ED8 !important;
+}
+
+.silver-btn{
+    background:#C0C0C0 !important;
+    color:black !important;
+    border-radius:8px;
+}
+
+/* EXTERNAL CONNECTION */
+
+.external-box{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* FOOTER */
@@ -137,40 +134,10 @@ nav ul li a:hover{
 footer{
     background:#0F172A;
     color:white;
-    text-align:center;
-    padding:25px;
 }
 
-footer p{
-    font-size:16px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-nav{
-    flex-direction:column;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:10px;
-}
-
-nav ul li{
-    margin:8px;
-}
-
-.hero-content h1{
-    font-size:45px;
-}
-
-.hero-content p{
-    font-size:18px;
-}
-
+footer hr{
+    border:1px solid silver;
 }
 
 </style>
@@ -180,64 +147,242 @@ nav ul li{
 
 <!-- NAVIGATION -->
 
-<nav>
+<div class="w3-bar w3-padding">
 
-<div class="logo">
-MY WEBSITE
+    <a href="index.html"
+       class="w3-bar-item w3-button active-nav">
+       Home
+    </a>
+
+    <a href="biodata.html"
+       class="w3-bar-item w3-button">
+       Biodata
+    </a>
+
+    <a href="experience.html"
+       class="w3-bar-item w3-button">
+       Experience
+    </a>
+
+    <a href="education.html"
+       class="w3-bar-item w3-button">
+       Education
+    </a>
+
+    <a href="family.html"
+       class="w3-bar-item w3-button">
+       Family
+    </a>
+
+    <a href="gallery.html"
+       class="w3-bar-item w3-button">
+       Gallery
+    </a>
+
+    <div class="w3-right">
+
+        <input
+            class="w3-input w3-border w3-round search-box"
+            type="text"
+            id="repo-search"
+            placeholder="Search portfolio logs..."
+            onkeyup="filterPortfolio()">
+
+    </div>
+
 </div>
-
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Biodata</a></li>
-<li><a href="#">Experience</a></li>
-<li><a href="#">Education</a></li>
-<li><a href="#">Family</a></li>
-<li><a href="#">Gallery</a></li>
-</ul>
-
-</nav>
 
 <!-- HERO -->
 
-<section class="hero">
+<header class="w3-container hero w3-center w3-padding-64">
 
-<div class="hero-content">
+    <h1><b>MY PERSONAL SPACE</b></h1>
 
-<h3>WELCOME TO MY WEBSITE</h3>
+    <p class="w3-large">
+        Archiving the academic progression, individual landmarks,
+        and creative environmental insights of an aspiring
+        Information Management professional.
+    </p>
 
-<h1>YOUR NAME</h1>
+    <a href="biodata.html"
+       class="w3-button w3-white w3-round-large w3-padding-large">
+       Explore Profile Matrix →
+    </a>
 
-<p>IMD318 INDIVIDUAL PROJECT</p>
+</header>
 
-<a href="#" class="btn">Explore More</a>
+<!-- CONTENT -->
+
+<div class="w3-content w3-padding-64" style="max-width:1150px">
+
+    <div class="w3-center w3-padding-32">
+
+        <h2 class="section-title">
+            <b>Curated Portfolio Modules</b>
+        </h2>
+
+        <p>
+            Select an operational gateway to review comprehensive
+            structures and environmental archives.
+        </p>
+
+    </div>
+
+    <div class="w3-row-padding">
+
+        <div class="w3-third w3-margin-bottom portfolio-item">
+
+            <div class="w3-card w3-white w3-padding">
+
+                <div class="card-icon">👤</div>
+
+                <h4><b>Personal Biodata</b></h4>
+
+                <p>
+                    Identity structural profiles, core demographic
+                    metrics, and custom image-mapped personal hobby
+                    summaries.
+                </p>
+
+                <a href="biodata.html"
+                   class="w3-button blue-btn">
+                   View
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="w3-third w3-margin-bottom portfolio-item">
+
+            <div class="w3-card w3-white w3-padding">
+
+                <div class="card-icon">💼</div>
+
+                <h4><b>Professional Timeline</b></h4>
+
+                <p>
+                    A structured log detailing practical technical
+                    assignments, hands-on tasks, and interactive
+                    environmental field records.
+                </p>
+
+                <a href="experience.html"
+                   class="w3-button blue-btn">
+                   View
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="w3-third w3-margin-bottom portfolio-item">
+
+            <div class="w3-card w3-white w3-padding">
+
+                <div class="card-icon">🎓</div>
+
+                <h4><b>Academic Background</b></h4>
+
+                <p>
+                    Institutional history logs displaying completed
+                    credentials mapped seamlessly with data and web
+                    competencies.
+                </p>
+
+                <a href="education.html"
+                   class="w3-button blue-btn">
+                   View
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- EXTERNAL CONNECTIONS -->
+
+    <div class="external-box w3-margin-top">
+
+        <h3><b>External Connections</b></h3>
+
+        <p>
+            Direct pipelines to operational system infrastructure,
+            markup repositories and technical stylesheet libraries.
+        </p>
+
+        <a href="https://github.com/"
+           target="_blank"
+           class="w3-button silver-btn">
+           GitHub Repository
+        </a>
+
+        <a href="https://www.w3schools.com/w3css/"
+           target="_blank"
+           class="w3-button blue-btn">
+           W3.CSS Framework
+        </a>
+
+    </div>
 
 </div>
 
-</section>
+<!-- GIF -->
 
-<!-- HOME CONTENT -->
+<div class="w3-center w3-padding-32">
 
-<section class="home-content">
+    <img src="image/levi.gif"
+         alt="Animation"
+         style="max-width:170px">
 
-<h2>Welcome</h2>
-
-<p>
-Insert your introduction here.
-You can write a short summary about yourself,
-your background and purpose of creating this website.
-</p>
-
-</section>
+</div>
 
 <!-- FOOTER -->
 
-<footer>
+<footer class="w3-container w3-center w3-padding-32">
 
-<p>
-© 2026 IMD318 Individual Project | All Rights Reserved
-</p>
+    <p>
+        <b>Statement of Responsibility:</b>
+        This website is designed and maintained wholly by
+        YOUR NAME (ID: YOUR STUDENT ID)
+        for fulfillment of the IMD318 coursework requirement.
+    </p>
+
+    <p class="w3-small">
+        Created: June 2026 |
+        Last Updated: June 2026
+    </p>
+
+    <hr>
+
+    <p>
+        © 2026 IMD318 Personal Digital Space
+    </p>
 
 </footer>
+
+<script>
+
+function filterPortfolio(){
+
+    var input = document.getElementById("repo-search");
+    var filter = input.value.toUpperCase();
+    var cards = document.getElementsByClassName("portfolio-item");
+
+    for(var i=0;i<cards.length;i++){
+
+        if(cards[i].innerText.toUpperCase().indexOf(filter)>-1){
+            cards[i].style.display="";
+        }
+
+        else{
+            cards[i].style.display="none";
+        }
+    }
+}
+
+</script>
 
 </body>
 </html>
