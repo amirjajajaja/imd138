@@ -136,7 +136,7 @@ margin-bottom:30px;
 .gallery-buttons{
 display:grid;
 grid-template-columns:
-repeat(3,1fr);
+repeat(2,1fr);
 gap:12px;
 margin-top:25px;
 }
@@ -317,6 +317,11 @@ and achievements.
 
 <button class="gallery-btn"
 onclick="showGallery(1)">
+📸 Photo
+</button>
+
+<button class="gallery-btn"
+onclick="showGallery(2)">
 🎥 Video
 </button>
 
@@ -345,6 +350,24 @@ class="modal-content">
 
 let gallery=[
 
+/* PHOTO */
+
+`<center>
+
+<img src="image/gallery_photo.jpg"
+onclick="openImage(this)"
+alt="Personal Gallery Photo">
+
+</center>
+
+<h2>Captured Moments</h2>
+
+<p>
+A collection of meaningful photographs preserving key memories, 
+achievements, and experiences gathered over time. Each visual record 
+highlights significant milestones throughout my journey.
+</p>`,
+
 /* VIDEO */
 
 `<center>
@@ -358,12 +381,12 @@ type="video/mp4">
 
 </center>
 
-<h2>Rinjani Expedition Video</h2>
+<h2>Gunung Datuk Expedition Video</h2>
 
 <p>
-A short video documenting the experience,
-journey and memorable moments during the
-Rinjani mountain expedition.
+A short video documenting the recreational experience, 
+trail journey, and memorable team moments captured during 
+the Gunung Datuk weekend hiking trip.
 </p>`
 
 ];
@@ -426,8 +449,8 @@ menu.classList.toggle("active");
 
 <p>
 This website is designed and maintained wholly by
-NUUR SHAHILA AISYAH
-(ID: 2024991167)
+MUHAMAD AMIR JOHAN BIN JOHARE
+(ID: 2024776833)
 for fulfillment of the IMD318 coursework requirement.
 </p>
 
