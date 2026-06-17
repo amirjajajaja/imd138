@@ -23,30 +23,30 @@ body{
 .w3-bar{
     background:white !important;
     box-shadow:0 2px 15px rgba(0,0,0,0.08);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
 
 .w3-bar-item{
     font-weight:bold;
     transition:0.3s;
+    border-radius:8px;
 }
 
 .w3-bar-item:hover{
     background:#EAF2FF !important;
+    color:#2563EB !important;
 }
 
 .active-nav{
     background:#2563EB !important;
     color:white !important;
-    border-radius:8px;
-}
-
-.search-box{
-    width:220px;
-    transition:0.3s;
-}
-
-.search-box:focus{
-    width:280px;
 }
 
 /* HERO */
@@ -59,6 +59,11 @@ body{
         #C0C0C0
     );
     color:white;
+    min-height:70vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 .hero h1{
@@ -140,6 +145,20 @@ footer hr{
     border:1px solid silver;
 }
 
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .w3-bar{
+        flex-wrap:wrap;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+}
+
 </style>
 </head>
 
@@ -147,7 +166,7 @@ footer hr{
 
 <!-- NAVIGATION -->
 
-<div class="w3-bar w3-padding">
+<div class="w3-bar">
 
     <a href="index.html"
        class="w3-bar-item w3-button active-nav">
@@ -179,17 +198,6 @@ footer hr{
        Gallery
     </a>
 
-    <div class="w3-right">
-
-        <input
-            class="w3-input w3-border w3-round search-box"
-            type="text"
-            id="repo-search"
-            placeholder="Search portfolio logs..."
-            onkeyup="filterPortfolio()">
-
-    </div>
-
 </div>
 
 <!-- HERO -->
@@ -197,6 +205,8 @@ footer hr{
 <header class="w3-container hero w3-center w3-padding-64">
 
     <h1><b>MY PERSONAL SPACE</b></h1>
+
+    <hr style="width:120px;border:2px solid silver">
 
     <p class="w3-large">
         Archiving the academic progression, individual landmarks,
@@ -301,8 +311,6 @@ footer hr{
 
     </div>
 
-    <!-- EXTERNAL CONNECTIONS -->
-
     <div class="external-box w3-margin-top">
 
         <h3><b>External Connections</b></h3>
@@ -328,8 +336,6 @@ footer hr{
 
 </div>
 
-<!-- GIF -->
-
 <div class="w3-center w3-padding-32">
 
     <img src="image/levi.gif"
@@ -338,15 +344,10 @@ footer hr{
 
 </div>
 
-<!-- FOOTER -->
-
 <footer class="w3-container w3-center w3-padding-32">
 
     <p>
-        <b>Statement of Responsibility:</b>
-        This website is designed and maintained wholly by
-        YOUR NAME (ID: YOUR STUDENT ID)
-        for fulfillment of the IMD318 coursework requirement.
+       ©  [NUUR SHAHILA AISYAH] &nbsp;&nbsp; [17DDT23F1034]
     </p>
 
     <p class="w3-small">
@@ -361,28 +362,6 @@ footer hr{
     </p>
 
 </footer>
-
-<script>
-
-function filterPortfolio(){
-
-    var input = document.getElementById("repo-search");
-    var filter = input.value.toUpperCase();
-    var cards = document.getElementsByClassName("portfolio-item");
-
-    for(var i=0;i<cards.length;i++){
-
-        if(cards[i].innerText.toUpperCase().indexOf(filter)>-1){
-            cards[i].style.display="";
-        }
-
-        else{
-            cards[i].style.display="none";
-        }
-    }
-}
-
-</script>
 
 </body>
 </html>
