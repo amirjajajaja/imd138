@@ -247,7 +247,7 @@ font-size:35px;
 }
 
 .gallery-buttons{
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(1,1fr);
 }
 
 .container{
@@ -301,7 +301,6 @@ records throughout my personal journey.
 
 </div>
 
-<!-- GALLERY CONTENT -->
 <div class="container">
 
 <h2 class="section-title">
@@ -309,8 +308,7 @@ Gallery Archive
 </h2>
 
 <p>
-This gallery contains selected photographs,
-adventures, memorable moments and multimedia
+This gallery contains selected multimedia
 collections that represent my personal experiences
 and achievements.
 </p>
@@ -319,31 +317,6 @@ and achievements.
 
 <button class="gallery-btn"
 onclick="showGallery(1)">
-📸 Family
-</button>
-
-<button class="gallery-btn"
-onclick="showGallery(2)">
-🏞 Nature
-</button>
-
-<button class="gallery-btn"
-onclick="showGallery(3)">
-🥾 Hiking
-</button>
-
-<button class="gallery-btn"
-onclick="showGallery(4)">
-🌊 Waterfall
-</button>
-
-<button class="gallery-btn"
-onclick="showGallery(5)">
-⌚ Image Map
-</button>
-
-<button class="gallery-btn"
-onclick="showGallery(6)">
 🎥 Video
 </button>
 
@@ -354,8 +327,6 @@ class="gallery-content">
 </div>
 
 </div>
-
-<!-- LIGHTBOX -->
 
 <div id="imgModal"
 class="modal">
@@ -373,113 +344,6 @@ class="modal-content">
 <script>
 
 let gallery=[
-
-/* FAMILY */
-
-`<center>
-
-<img src="image/fam.JPG"
-onclick="openImage(this)"
-alt="Family Photo">
-
-</center>
-
-<h2>Family Memories</h2>
-
-<p>
-A collection of memorable moments spent with
-family members. Family remains the greatest
-source of support, encouragement and happiness
-throughout my life.
-</p>`,
-
-/* NATURE */
-
-`<center>
-
-<img src="image/takah.JPG"
-onclick="openImage(this)"
-alt="Nature Gallery">
-
-</center>
-
-<h2>Nature Exploration</h2>
-
-<p>
-Capturing the beauty of nature through scenic
-views, rivers, forests and outdoor adventures.
-These experiences help me appreciate the natural
-environment and create lasting memories.
-</p>`,
-
-/* HIKING */
-
-`<center>
-
-<img src="image/cbl.JPG"
-onclick="openImage(this)"
-alt="Hiking Adventure">
-
-</center>
-
-<h2>Hiking Adventure</h2>
-
-<p>
-Hiking activities challenge physical endurance
-and provide opportunities to explore beautiful
-landscapes while strengthening teamwork and
-self-confidence.
-</p>`,
-
-/* WATERFALL */
-
-`<center>
-
-<img src="image/kontan.JPG"
-onclick="openImage(this)"
-alt="Waterfall Adventure">
-
-</center>
-
-<h2>Waterfall Exploration</h2>
-
-<p>
-Exploring waterfalls and natural attractions
-while enjoying the beauty of flowing water,
-fresh surroundings and unique landscapes.
-</p>`,
-
-/* IMAGE MAP */
-
-`<center>
-
-<img src="image/hoka.jpg"
-usemap="#trailmap"
-style="max-width:700px;width:100%;">
-
-<map name="trailmap">
-
-<area shape="circle"
-coords="136,180,35"
-href="https://www.coros.com"
-target="_blank">
-
-<area shape="poly"
-coords="134,20,267,10,363,85,342,150,294,165,216,135,115,110"
-href="https://www.hoka.com"
-target="_blank">
-
-</map>
-
-</center>
-
-<h2>Interactive Image Map</h2>
-
-<p>
-This image map links selected equipment
-directly to the official product websites.
-Click the watch or shoe area to explore.
-</p>`,
 
 /* VIDEO */
 
@@ -553,8 +417,6 @@ menu.classList.toggle("active");
 }
 
 </script>
-
-<!-- FOOTER -->
 
 <footer>
 
