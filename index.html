@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Personal Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Times New Roman", serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,0.85);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    color:silver;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:silver;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:100vh;
+    background:linear-gradient(
+        135deg,
+        #0F172A,
+        #2563EB,
+        #C0C0C0
+    );
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h3{
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:white;
+    color:#2563EB;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* HOME CONTENT */
+
+.home-content{
+    padding:100px 10%;
+    text-align:center;
+    background:white;
+}
+
+.home-content h2{
+    color:#2563EB;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.home-content p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0F172A;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer p{
+    font-size:16px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:10px;
+}
+
+nav ul li{
+    margin:8px;
+}
+
+.hero-content h1{
+    font-size:45px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+MY WEBSITE
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Biodata</a></li>
+<li><a href="#">Experience</a></li>
+<li><a href="#">Education</a></li>
+<li><a href="#">Family</a></li>
+<li><a href="#">Gallery</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h3>WELCOME TO MY WEBSITE</h3>
+
+<h1>YOUR NAME</h1>
+
+<p>IMD318 INDIVIDUAL PROJECT</p>
+
+<a href="#" class="btn">Explore More</a>
+
+</div>
+
+</section>
+
+<!-- HOME CONTENT -->
+
+<section class="home-content">
+
+<h2>Welcome</h2>
+
+<p>
+Insert your introduction here.
+You can write a short summary about yourself,
+your background and purpose of creating this website.
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 IMD318 Individual Project | All Rights Reserved
+</p>
+
+</footer>
+
+</body>
+</html>
