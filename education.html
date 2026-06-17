@@ -394,54 +394,6 @@ Completed
 <br><br>
 
 <h2 class="section-title">
-Core Subjects & Knowledge Areas
-</h2>
-
-<p>
-Click any subject below to view detailed information.
-</p>
-
-<div class="education-buttons">
-
-<button class="education-btn"
-onclick="showSubject(1)">
-🌐 Networking
-</button>
-
-<button class="education-btn"
-onclick="showSubject(2)">
-💻 Web Development
-</button>
-
-<button class="education-btn"
-onclick="showSubject(3)">
-🗄 Database Management
-</button>
-
-<button class="education-btn"
-onclick="showSubject(4)">
-☁ Information Systems
-</button>
-
-<button class="education-btn"
-onclick="showSubject(5)">
-🔐 Cybersecurity
-</button>
-
-<button class="education-btn"
-onclick="showSubject(6)">
-🖥 IT Support
-</button>
-
-</div>
-
-<div id="subjectPanel"
-class="education-content">
-</div>
-
-<br><br>
-
-<h2 class="section-title">
 Technical Competencies
 </h2>
 
@@ -458,22 +410,12 @@ HTML & CSS
 
 <button class="education-btn"
 onclick="showSkill(2)">
-Networking
+Organization of Information
 </button>
 
 <button class="education-btn"
 onclick="showSkill(3)">
-Microsoft 365
-</button>
-
-<button class="education-btn"
-onclick="showSkill(4)">
-Active Directory
-</button>
-
-<button class="education-btn"
-onclick="showSkill(5)">
-IT Support
+Archival Management
 </button>
 
 </div>
@@ -485,47 +427,6 @@ class="education-content">
 </div>
 
 <script>
-
-let subjects=[
-
-`<h3>☁ Information Systems</h3>
-
-<p>
-Studying information systems,
-digital transformation and technology
-integration within organizations.
-</p>`,
-
-`<h3>🔐 Cybersecurity</h3>
-
-<p>
-Understanding security principles,
-access control, data protection and
-basic cybersecurity practices.
-</p>`,
-
-`<h3>🖥 IT Support</h3>
-
-<p>
-Providing technical support,
-troubleshooting hardware and software
-issues while assisting end users in
-daily operations.
-</p>`
-
-];
-
-function showSubject(no){
-
-var panel =
-document.getElementById("subjectPanel");
-
-panel.style.display="block";
-
-panel.innerHTML=
-subjects[no-1];
-
-}
 
 let skills=[
 
@@ -548,7 +449,26 @@ text-align:center;">
 
 </div>`,
 
-`<h3>Active Directory</h3>
+`<h3>Organization of Information</h3>
+
+<p>
+Proficiency Level: 85%
+</p>
+
+<div style="background:#ddd;
+border-radius:20px;overflow:hidden;">
+
+<div style="width:85%;
+background:#2563EB;
+color:white;
+padding:8px;
+text-align:center;">
+85%
+</div>
+
+</div>`,
+
+`<h3>Archival Management</h3>
 
 <p>
 Proficiency Level: 80%
@@ -563,25 +483,6 @@ color:white;
 padding:8px;
 text-align:center;">
 80%
-</div>
-
-</div>`,
-
-`<h3>IT Support</h3>
-
-<p>
-Proficiency Level: 90%
-</p>
-
-<div style="background:#ddd;
-border-radius:20px;overflow:hidden;">
-
-<div style="width:90%;
-background:#2563EB;
-color:white;
-padding:8px;
-text-align:center;">
-90%
 </div>
 
 </div>`
